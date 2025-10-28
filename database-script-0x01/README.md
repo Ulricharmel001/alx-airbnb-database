@@ -17,6 +17,3 @@ It defines all tables, primary keys, foreign keys, constraints, and indexes acco
 - Indexes on commonly queried fields for optimized performance.  
 - Timestamp columns for creation and updates.
 
-## INSERT COMMAND 
-
-Script taht insert data in the various table available 
