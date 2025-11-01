@@ -1,3 +1,11 @@
+SELECT 
+    user_id,
+    COUNT(*) AS total_bookings
+FROM Booking
+GROUP BY user_id
+ORDER BY total_bookings DESC;
+
+
 -- Rank properties by total bookings using ROW_NUMBER()
 SELECT 
     property_id,
