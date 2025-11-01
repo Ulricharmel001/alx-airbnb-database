@@ -10,3 +10,17 @@ CREATE INDEX idx_property_location ON Property(location);
 
 -- User table indexes
 CREATE INDEX idx_user_email ON `User`(email);
+
+-- Measure query performance before and after indexes
+EXPLAIN
+SELECT u.first_name, b.booking_id
+FROM `User` u
+INNER JOIN Booking b ON u.user_id = b.user_id
+WHERE u.email = 'ulrichsgrahix@gmail.com';
+
+-- Optional: EXPLAIN ANALYZE for MySQL 8+ to see execution timing
+-- EXPLAIN ANALYZE
+-- SELECT u.first_name, b.booking_id
+-- FROM `User` u
+-- INNER JOIN Booking b ON u.user_id = b.user_id
+-- WHERE u.email = 'ulrichsgrahix@gmail.com';
